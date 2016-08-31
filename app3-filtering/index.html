@@ -1,6 +1,13 @@
-<html>
-	<body>
-		Something
+<html ng-app="myApp">
+<head>
+  <title>Angular Drill 3</title>
+
+</head>
+	<body ng-controller="mainCtrl">
+		Filter: <input ng-model="filterAll" type="text" name="name" value="">
+<section ng-repeat="datum in data | filter: filterAll" >
+	{{datum.name}}  <br>     {{datum.email}}   {{datum.phone}}
+</section>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
